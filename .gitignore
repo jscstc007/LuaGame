@@ -2,4 +2,6 @@ Library
 Temp
 UnityPackageManager
 *.sln
+*.csproj
+
 
