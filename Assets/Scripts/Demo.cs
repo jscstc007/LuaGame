@@ -31,11 +31,30 @@ public class Demo : MonoBehaviour {
         //call cs
         //DoCSMethod();
         //call lua
-        DoLuaMethod();
+        //DoLuaMethod();
+
+        LuaEnv.CustomLoader loader1 = CustomLoad1;
+        luaEnv.AddLoader(loader1);
+
+        luaEnv.DoString("require 'lua'");
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    private byte[] CustomLoad1 (ref string fileName)
+    {
+        Debug.Log(fileName);
+
+        //找到指定文件  
+        if ("lua1111" == fileName)
+        {
+            string str = "print('lua>>>>>')";
+            return System.Text.ASCIIEncoding.UTF8.GetBytes(str);
+        }
+
+        return null;
+    }
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 

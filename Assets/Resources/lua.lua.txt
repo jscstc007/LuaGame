@@ -50,6 +50,3 @@ for i = 1,10 do
     btnGo = GameObject.Instantiate(btn)
     btnGo.transform:SetParent(bgGo.transform)    
 end
-
-t = C1()
-print(t.i1)
