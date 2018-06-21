@@ -1,0 +1,20 @@
+﻿local GameObject = CS.UnityEngine.GameObject
+local Debug = CS.UnityEngine.Debug
+
+function start(  )
+    -- body
+    print('this is lua start -- go1')
+    Debug.Log('this is cs log -- go1')
+end
+
+local time = 0
+local frame = 30
+
+function update(  )
+    -- body
+    time = time + 1
+    if (time % frame == 0) then
+        print('this is lua update -- go1:'..time)
+    Debug.Log('this is cs update -- go1:'..time)
+    end
+end

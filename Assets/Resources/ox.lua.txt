@@ -1,0 +1,25 @@
+﻿local GameObject = CS.UnityEngine.GameObject
+local Debug = CS.UnityEngine.Debug
+
+local inputfield
+local button
+local text
+
+function start(  )
+    -- body
+    inputfield = GameObject.Find('Canvas/InputField'):GetComponent("InputField")
+    button = GameObject.Find('Canvas/Button'):GetComponent("Button")
+    text = GameObject.Find('Canvas/Text'):GetComponent("Text")
+
+    print(inputfield.name.." "..button.name.." "..text.name)
+
+    registUIMethod()
+end
+
+function registUIMethod()
+    button.onClick:AddListener(
+        function ()
+            local txt = inputfield.text
+            text.text = txt
+        end)
+end

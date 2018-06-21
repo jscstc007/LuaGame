@@ -1,0 +1,8 @@
+﻿local GameObject = CS.UnityEngine.GameObject
+local Debug = CS.UnityEngine.Debug
+
+function start(  )
+    -- body
+    print('this is lua start -- go2')
+    Debug.Log('this is cs log -- go2')
+end
