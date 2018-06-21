@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="UnityEngine" type="Lua_net">
+    <CLASSES>
+      <root url="dll://D:/Unity2017.4.3/Editor/Data/Managed/UnityEngine.dll!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,55 @@
+﻿-- local Gameobject = CS.UnityEngine.GameObject
+-- local Transform = CS.UnityEngine.Transform
+-- local Vector2 = CS.UnityEngine.Vector2
+-- local Vector3 = CS.UnityEngine.Vector3
+
+-- local Root = Gameobject.Find("UI").transform
+
+-- bg = CS.UnityEngine.Resources.Load("UI/BG_P")
+-- btn = CS.UnityEngine.Resources.Load("UI/Btn_B")
+
+-- bgGo = Gameobject.Instantiate(bg)
+-- bgGo.transform:SetParent(Root)
+-- bgGo.name = "BG_P"
+-- bgGo:GetComponent("RectTransform").anchoredPosition = Vector2.zero
+-- bgGo:GetComponent("RectTransform").sizeDelta = Vector2.zero
+-- bgGo.transform.localScale = Vector3.one;
+-- for i=1,10 do
+--     btnGo = Gameobject.Instantiate(btn)
+--     btnGo.transform:SetParent(bgGo.transform)
+--     local index = i
+--     btnGo.name = "index_"..index
+
+--     --TODO
+--     btnGo:GetComponent("Button").onClick:AddListener( 
+--         function ()
+--             CS.UnityEngine.Debug.Log("Click" .. index)
+--         end
+--     )
+
+--     btnGo:GetComponent("Button").onClick:RemoveAllListeners()
+-- end
+
+local GameObject = CS.UnityEngine.GameObject
+local Resources = CS.UnityEngine.Resources
+local Vector2 = CS.UnityEngine.Vector2
+local Vector3 = CS.UnityEngine.Vector3
+
+local UIRoot = GameObject.Find("/UI").transform
+
+bg = Resources.Load("UI/BG_P")
+btn = Resources.Load("UI/Btn_B")
+
+bgGo = GameObject.Instantiate(bg)
+bgGo.transform:SetParent(UIRoot)
+bgGo:GetComponent("RectTransform").anchoredPosition = Vector2.zero
+bgGo:GetComponent("RectTransform").sizeDelta = Vector2.zero
+bgGo.transform.localScale = Vector3.one
+
+for i = 1,10 do
+    btnGo = GameObject.Instantiate(btn)
+    btnGo.transform:SetParent(bgGo.transform)    
+end
+
+t = C1()
+print(t.i1)

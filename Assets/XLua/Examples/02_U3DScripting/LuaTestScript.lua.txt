@@ -7,6 +7,11 @@
 local speed = 10
 local lightCpnt = nil
 
+function awake( )
+    -- body
+    print('awake')
+end
+
 function start()
 	print("lua start...")
 	print("injected object", lightObject)

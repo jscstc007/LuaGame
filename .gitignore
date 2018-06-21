@@ -3,5 +3,6 @@ Temp
 UnityPackageManager
 *.sln
 *.csproj
+.vs
 
 
