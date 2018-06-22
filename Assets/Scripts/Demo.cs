@@ -4,6 +4,7 @@ using UnityEngine;
 using XLua;
 using UnityEngine.UI;
 
+[Hotfix]
 public class C1
 {
     int i1 = 100;
@@ -33,10 +34,17 @@ public class Demo : MonoBehaviour {
         //call lua
         //DoLuaMethod();
 
-        LuaEnv.CustomLoader loader1 = CustomLoad1;
-        luaEnv.AddLoader(loader1);
+        //LuaEnv.CustomLoader loader1 = CustomLoad1;
+        //luaEnv.AddLoader(loader1);
 
-        luaEnv.DoString("require 'lua'");
+        //luaEnv.DoString("require 'lua'");
+
+        DoLog();
+    }
+
+    private void DoLog ()
+    {
+        print("this is cs log");
     }
 
     private byte[] CustomLoad1 (ref string fileName)
